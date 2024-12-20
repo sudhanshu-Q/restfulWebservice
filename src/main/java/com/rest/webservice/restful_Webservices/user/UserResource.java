@@ -1,16 +1,17 @@
 package com.rest.webservice.restful_Webservices.user;
 
 import java.net.URI;
-import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
-
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import jakarta.validation.Valid;
 
 @RestController
 public class UserResource {
@@ -40,7 +41,7 @@ public class UserResource {
 
 	// Post create new user
 	@PostMapping("/users")
-	public ResponseEntity<User> createUser(@RequestBody User user) {
+	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
 		User savedUser=service.saveUser(user);
 		//return URI in response for created user
 		URI location=ServletUriComponentsBuilder.fromCurrentRequest()
@@ -48,6 +49,12 @@ public class UserResource {
 		//configure response for status and message
 		return ResponseEntity.created(location).build();
 
+	}
+	
+	// DELETE/user/{number}
+	@DeleteMapping("/users/{id}")
+	public void deleteUser(@PathVariable int id) {
+		service.deleteById(id);
 	}
 
 }
