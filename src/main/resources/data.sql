@@ -10,3 +10,5 @@ insert into USER_DETAILS(BIRTH_DATE,ID,NAME)
 values(current_date(),1105,'DEHG');
 insert into USER_DETAILS(BIRTH_DATE,ID,NAME)
 values(current_date(),1106,'MISS CATR');
+insert into USER_DETAILS(BIRTH_DATE,ID,NAME)
+values(current_date(),1107,'MISS kkATR');
