@@ -7,6 +7,8 @@ import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.validation.Valid;
+
 @Component
 public class UserDaoService {
 	// Dao service is to manage user class details
@@ -35,7 +37,7 @@ public class UserDaoService {
 	}
 	
 	//Create new User
-	public User saveUser(User user) {
+	public User saveUser(@Valid User user) {
 		user.setId(++userCount);
 		users.add(user);
 		return user;
