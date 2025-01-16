@@ -5,7 +5,11 @@ h2 {
 	text-align: center;
 	color: blue;
 }
-
+logo {  
+	background-size: contain;  
+	   width: 100px;  
+	   height: 50px;  
+}  
 strong {
     font-weight: 700;
     background-color: yellow;
@@ -14,6 +18,49 @@ strong {
 p {
     font-family: sans-serif;
 }
+h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+	text-align: center;
+	color: black;
+}
+html, body {
+min-height: 10vh;
+padding: 100;
+margin: 1000;
+font-family: Roboto, Arial, sans-serif;
+font-size: 14px; 
+color: darkorange;
+}
 body {
-  background-color: lightblue;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+background: #5a7233;
+}
+form {
+position: relative;
+width: 0%;
+border-radius: 50px;
+background: #fff;
+}
+button {
+width: 100%;
+padding: 15px;
+margin-top: 5px;
+border-radius: 20px;
+border-bottom: 4px solid #3e4f24;
+background: #5a7233; 
+font-size: 19px;
+font-weight: 400;
+}
+button:hover {
+background: #3e4f24;
+border: navajowhite;
+} 
+@media (min-width: 568px) {
+form {
+width: 80%;
+}
 }

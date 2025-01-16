@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,19 @@
 	</title>
 	<link th:href="@{../CSS/styles.css}" rel="stylesheet" />
 </head>
-<!-- logo begin -->
-<div id="logo">
-	<a href="http://localhost:8010/home">
-		<img th:src="@{android-chrome-512x512.png}" alt="GET IMAGE" width="40" height="40">
-	</a>
-</div>
-<!-- logo close -->
 
 <body>
-	<div class="main" border="1" align="center">
-		<img th:src="@{../images/pexels-photo-hp.jpg}" alt="image" width="1000" height="300">
+	<div class="main" border="1" align="left">
+		<!-- logo begin -->
+		<div class="logo">
+			<a href="http://localhost:8010/home">
+				<img th:src="@{android-chrome-512x512.png}" alt="GET IMAGE" width="50" height="40">Lets Code !!
+			</a>
+		</div>
+		<!-- logo close -->
+		<img th:src="@{../images/pexels-photo-hp.jpg}" alt="image" width="1200" height="200">
 		<h1>
-			Lets Code!!!!!
+			More on Software Testing
 		</h1>
 		<h2><strong> Give your details</strong></h2>
 		<div class="h1" border="1" align="center">
@@ -54,6 +55,16 @@
 				}
 			</script>
 		</div>
+		<footer>
+			<button id="e_name" type="button" onclick="myFunction()" target="_parent">Equiry us</button>
+			<script>
+				function myFunction() {
+					window.open("http://localhost:8010/enquiry");
+				}
+			</script>
+		</footer>
+	</div>
+
 </body>
 
 </html>
