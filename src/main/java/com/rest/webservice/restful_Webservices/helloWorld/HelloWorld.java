@@ -20,11 +20,15 @@ public class HelloWorld {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET,path = "/home")
-	public Model helloworld(Model model) {;
+	public Model homepage(Model model) {;
+		return model;
+	}
+	@RequestMapping(method = RequestMethod.GET,path = "/enquiry")
+	public Model enquiryPage(Model model) {;
 		return model;
 	}
 	@RequestMapping(method = RequestMethod.GET,path = "/student")
-	public Model navigateStudent(Model model) {;
+	public Model studentpage(Model model) {;
 		return model;
 	}
 	
