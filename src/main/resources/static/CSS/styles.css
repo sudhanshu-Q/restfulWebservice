@@ -122,3 +122,17 @@ width: 80%;
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+input::placeholder {
+  color: lightpink;
+  opacity: 0.8;
+  border: lightgreen;
+  border-radius: 5px;
+}
+input[type=text] {
+  background-color: wheat;
+  color: black;
+}
+input[type=password] {
+  background-color: wheat;
+  color: black;
+}
