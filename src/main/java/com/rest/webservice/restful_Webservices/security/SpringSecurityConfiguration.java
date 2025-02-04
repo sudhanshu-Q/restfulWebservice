@@ -14,6 +14,8 @@ public class SpringSecurityConfiguration {
 		http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
 		http.httpBasic(withDefaults());
 		http.csrf().disable();
+		//for h2 console 
+		http.headers().frameOptions().disable();
 		return http.build();
 	}
 

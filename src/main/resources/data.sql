@@ -12,3 +12,6 @@ insert into USER_DETAILS(BIRTH_DATE,ID,NAME)
 values(current_date(),1106,'MISS CATR');
 insert into USER_DETAILS(BIRTH_DATE,ID,NAME)
 values(current_date(),1107,'MISS kkATR');
+
+insert into empl(ID,NAME,AGE,SALARY)
+values(3,'MISS kkATR',34,8900);
