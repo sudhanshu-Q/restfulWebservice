@@ -13,16 +13,22 @@ import jakarta.validation.constraints.Size;
 @Entity(name = "User_details")
 public class User {
 	// member variable in our user class
+	
+	//constructor required for UserResourceJpa to call
+	protected User() {
+		
+	}
+	
 	@Id
 	@GeneratedValue
 	private Integer id;
 	
 	@Size(min = 3,max = 20,message = "min lenght is 3 and max is 20")
-	@JsonProperty("User_name")//Customized field name in response
+	//@JsonProperty("User_name")//Customized field name in response
 	private String name;
 	
 	@Past(message = "BirthDate should be in past date")
-	@JsonProperty("birth_date")
+	//@JsonProperty("birth_date")
 	private LocalDate birthDate;
 
 	// Constructor for user class
