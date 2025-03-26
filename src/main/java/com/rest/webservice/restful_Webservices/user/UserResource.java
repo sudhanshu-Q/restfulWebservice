@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -56,6 +57,19 @@ public class UserResource {
 
 	}
 	
+	//PUT request
+    @PutMapping("/put/users/{id}")
+    public ResponseEntity<User> updateUser(@PathVariable int id,@RequestBody User userdetails) {
+    	User user= service.findOne(id);
+		if(user==null) {
+			throw new UserNotFound("id :"+id);
+		}
+		user.setName(userdetails.getName());
+		User savedUser=service.updateUser(user, id);
+		return ResponseEntity.ok(user);
+    }
+
+	
 	// DELETE/user/{number}
 	@DeleteMapping("/users/{id}")
 	public void deleteUser(@PathVariable int id) {
@@ -78,5 +92,6 @@ public class UserResource {
 			entityModel.add(linkBuilder.withRel("all_users"));
 			return entityModel;
 		}
+		
 
 }

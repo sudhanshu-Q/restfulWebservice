@@ -14,7 +14,7 @@ public class UserDaoService {
 	// Dao service is to manage user class details
 	// JPA/Hibernate> DataBase
 	// UserDaoService > static List
-    private static int userCount=3;
+    private static int userCount=0;
 	
 	private static List<User> users = new ArrayList<>();
 	static {
@@ -43,6 +43,13 @@ public class UserDaoService {
 		return user;
 		
 	}
+	
+	//Update user
+	public User updateUser(@Valid User user,int id) {
+		user.setName(user.getName());
+		return user;
+	}
+	
 	
 	// Delete one user by id
 	public void deleteById(int id) {
