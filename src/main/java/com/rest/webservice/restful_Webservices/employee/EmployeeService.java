@@ -23,7 +23,7 @@ public class EmployeeService {
 		static {
 			empl.add(new Employees("sud1", 1, 200, 28));
 			empl.add(new Employees("dcv1", 2, 200, 28));
-			empl.add(new Employees());
+		//	empl.add(new Employees());
 		}
 
 
@@ -34,9 +34,11 @@ public class EmployeeService {
 	
 	//Create new Employees
 	public Employees addEmployee(@Valid Employees employees) {
-		//employees.setID(++userCount);
+		employees.setID(++userCount);
 		empl.add(employees);
 		return employees;
 		
 	}
+	
+
 }

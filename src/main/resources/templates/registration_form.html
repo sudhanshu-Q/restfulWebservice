@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Welcome to Registration Page
+	</title>
+
+	<style type="text/css">
+		label {
+			display: inline-block;
+			width: 200px;
+			margin: 5px;
+			text-align: left;
+		}
+
+		button {
+			margin: 10px;
+			padding: 10px;
+		}
+
+		input[type=text],
+		input[type=password],
+		select {
+			display: inline-block;
+			width: 200px;
+			margin: 5px;
+			text-align: left;
+		}
+
+		input[type=checkbox] {
+			display: inline-block;
+			width: 200px;
+			margin: 5px;
+			text-align: left;
+		}
+
+		input[type=radio] {
+			display: inline-block;
+			width: 53px;
+			margin: 5px;
+			text-align: left;
+		}
+
+		input[type=date] {
+			display: inline-block;
+			width: 200px;
+			margin: 5px;
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body bgcolor="GREY">
+	<div align="center">
+		<h1>Enter Registration details:</h1>
+		<form action="#" th.action="@{/newMember}" th:object="${user}" method="post">
+
+			<label>Full name</label>
+			<input type="text" th:field="*{name}" /><br />
+
+			<label>Email : </label>
+			<input type="text" th:field="*{email}" /><br />
+
+			<label>Password : </label>
+			<input type="text" th:field="*{password}" /><br />
+
+			<label>Birthday (yyyy-mm-dd) : </label>
+			<input type="date" th:field="*{birthday}" /><br />
+			<label>Profession:</label>
+			<select th:field="*{profession}">
+				<option th:each="p : ${professionList}" th:value="${p}" th:text="${p}">
+				</option>
+			</select>
+			<br />
+
+			<label>Married ? </label>
+			<input type="checkbox" th:field="*{married}" /><br />
+			<label>Gender: </label>
+			<input type="radio" th:field="*{gender}" value="Male" />Male
+			<input type="radio" th:field="*{gender}" value="Female" />Female
+			<br />
+			<label>Note:
+			</label>
+			<textarea rows="5" cols="25" th:field="*{note}"></textarea><br />
+			<button name="Submit Form" type="submit">Register</button>
+		</form>
+	</div>
+</body>
+
+</html>

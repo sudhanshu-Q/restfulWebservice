@@ -1,0 +1,41 @@
+label {
+	display: inline-block;
+	width: 200px;
+	margin: 5px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text],
+input[type=password],
+select {
+	display: inline-block;
+	width: 200px;
+	margin: 5px;
+	text-align: left;
+}
+
+input[type=checkbox] {
+	display: inline-block;
+	width: 200px;
+	margin: 5px;
+	text-align: left;
+}
+
+input[type=radio] {
+	display: inline-block;
+	width: 53px;
+	margin: 5px;
+	text-align: left;
+}
+
+input[type=date] {
+	display: inline-block;
+	width: 200px;
+	margin: 5px;
+	text-align: left;
+}
