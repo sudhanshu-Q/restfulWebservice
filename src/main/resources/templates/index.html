@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home page
+		</title>
+	</head>
+<body bgcolor="GREY">
+	<div align="center">
+		<h1>Please Register for More Info</h1>
+		<a href="/register">Click here to register !</a>
+	</div>
+	<div align="center">
+			<h1>Please create new Member</h1>
+			<a href="/newMember">Click here for new member !</a>
+				<form action="#" th.action="@{/newMember}" th:object="${member}" method="post">
+				</form>
+			</div>
+		
+</body>
+</html>

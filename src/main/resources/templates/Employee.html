@@ -25,5 +25,23 @@
 		</tbody>
 	</table>
 <script th:src="@{../CSS/script.js}"> </script></body>
-
+<div border="1" align="center">
+	</div>
+	<form action="/" class="decor">
+		<input type="text" placeholder="Username">
+		<input type="email" placeholder="Email">
+		<textarea placeholder="Message..." rows="5"></textarea>
+		<button type="submit" href="/">Submit</button>
+</div>
+<label for="looking for">Select Option</label>
+		<select name="course" id="course">
+			<optgroup label="Backend Course">
+				<option value="java">JAVA</option>
+				<option value="python">Python</option>
+			</optgroup>
+			<optgroup label="UI courses">
+				<option value="html">HTML</option>
+				<option value="React js">React JS</option>
+			</optgroup>
+		</select>
 </html>
