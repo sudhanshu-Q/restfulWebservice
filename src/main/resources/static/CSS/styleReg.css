@@ -39,3 +39,60 @@ input[type=date] {
 	margin: 5px;
 	text-align: left;
 }
+
+body {
+	background-color: lemonchiffon;
+}
+
+h1 {
+	color: black;
+	text-align: center;
+}
+
+p {
+	font-family: verdana;
+	font-size: 20px;
+}
+
+a:link {
+	color: green;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:visited {
+	color: blueviolet;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+a:active {
+	color: yellow;
+	background-color: olivedrab;
+	text-decoration: underline;
+}
+
+span {
+	display: inline-block;
+	width: 200px;
+	margin: 5px;
+	text-align: left;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+form {
+border-radius: 20px;
+background: deepskyblue;
+margin-left: 100px;
+margin-right: 100px;
+border: 2px solid black;
+}
