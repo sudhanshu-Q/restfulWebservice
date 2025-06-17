@@ -6,23 +6,25 @@
 	<title>Welcome to Member Page
 	</title>
 	<link th:href="@{../CSS/styleReg.css}" rel="stylesheet" />
-	</head>
-	<body bgcolor="GREY">
-		<div align="center">
-			<h1>Enter Membership details:</h1>
-			<form action="#" th.action="@{/memberForm}" th:object="${user}" method="post">
+</head>
 
-				<label>Full name</label>
-				<input type="text" th:field="*{name}" /><br />
+<body>
+	<div align="center">
+		<h1>Enter Membership details:</h1>
+		<form action="#" th.action="@{/memberForm}" th:object="${user}" method="post">
 
-				<label>Email : </label>
-				<input type="text" th:field="*{email}" /><br />
+			<label>Full name</label>
+			<input type="text" th:field="*{name}" /><br />
 
-				<label>Password : </label>
-				<input type="text" th:field="*{password}" /><br />
+			<label>Email : </label>
+			<input type="text" th:field="*{email}" /><br />
 
-				<button name="Submit Form" type="submit">Register</button>
-			</form>
-		</div>
-	</body>
-	</html>
+			<label>Password : </label>
+			<input type="text" th:field="*{password}" /><br />
+
+			<button name="Submit Form" type="submit">Register</button>
+		</form>
+	</div>
+</body>
+
+</html>

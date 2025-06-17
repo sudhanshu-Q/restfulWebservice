@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Home page
-		</title>
-		<link th:href="@{../CSS/styleReg.css}" rel="stylesheet" />
-	</head>
-<body bgcolor="GREY">
-	<div align="center">
-		<h1>Please Register for More Info</h1>
-		<a href="/register">Click here to register !</a>
-	</div>
-	<div align="center">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home page
+	</title>
+	<link th:href="@{../CSS/styleReg.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="main" border="1" align="left">
+		<!-- logo begin -->
+		<div class="logo">
+			<a href="http://localhost:8010/home">
+				<img th:src="@{android-chrome-512x512.png}" alt="GET IMAGE" width="50" height="40">Lets Code !!
+			</a>
+		</div>
+		<!-- logo close -->
+		<img th:src="@{../images/pexels-photo-hp.jpg}" alt="image" width="1200" height="200">
+		<div align="center">
+			<h1>Please Register for More Info</h1>
+			<a href="/register">Click here to register !</a>
+		</div>
+		<div align="center">
 			<h1>Please create new Member</h1>
 			<a href="/newMember">Click here for new member !</a>
-				<form action="#" th.action="@{/newMember}" th:object="${member}" method="post">
-				</form>
+			<form action="#" th.action="@{/newMember}" th:object="${member}" method="post">
+			</form>
+		</div>
+		<div align="center">
+			<h1>Enquiry us :</h1>
+			<a href="/newEnquiry">Please enquire at :</a>
+			<form action="#" th.action="@{/newEnquiry}" th:object="${member}" method="post">			</form>
+					</form>
 			</div>
-		
+
 </body>
+
 </html>
