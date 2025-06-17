@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Enquiry page
+	</title>
+	<link th:href="@{../CSS/styleReg.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div align="center">
+		<h1>Enter Enquiry:</h1>
+		<form action="#" th.action="@{/newEnquiry}" th:object="${user}" method="post">
+
+				<label>Full_Name</label>
+				<input type="text" th:field="*{name}" /><br />
+
+				<label>Email id : </label>
+				<input type="text" th:field="*{email}" /><br />
+
+				<label>Message at : </label>
+				<input type="text" th:field="*{message}" /><br />
+
+				<button name="Submit Form" type="submit">Register</button>
+			</form>
+	</div>
+</body>
+
+</html>

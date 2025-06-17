@@ -30,10 +30,7 @@ public class HelloWorld {
 	public Model homepage(Model model) {;
 		return model;
 	}
-	@RequestMapping(method = RequestMethod.GET,path = "/enquiry")
-	public Model enquiryPage(Model model) {
-		return model;
-	}
+
 	@RequestMapping(method = RequestMethod.GET,path = "/student")
 	public Model studentpage(Model model) {;
 		return model;
